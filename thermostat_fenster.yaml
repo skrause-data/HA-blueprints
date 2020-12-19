@@ -1,7 +1,7 @@
 blueprint:
   name: Fenster auf, Heizung aus
   description: Eine Automatisierung, die die Heizung ausschaltet, wenn ein Fenster(sensor) geöffnet ist. Es wartet, bis das Fenster wieder geschlossen wird, um die Heizung wieder einzuschalten.
-   input:
+  input:
     window_entity:
       name: Fenster Sensor
       selector:
