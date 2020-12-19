@@ -7,7 +7,7 @@ blueprint:
       selector:
         entity:
           domain: binary_sensor
-          device_class: switch
+          device_class: door
     climate_target:
       name: Heizung
       selector:
