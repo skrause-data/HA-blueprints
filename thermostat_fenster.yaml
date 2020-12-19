@@ -12,6 +12,7 @@ blueprint:
       selector:
         entity:
           domain: climate
+          device_class: switch
 
 trigger:
   - platform: state
