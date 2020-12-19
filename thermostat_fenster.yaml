@@ -9,7 +9,7 @@ blueprint:
       selector:
         entity:
           domain: binary_sensor
-          device_class: *
+          device_class: switch
     climate_target:
       name: Climate Device
       description: The climate entity that is controlled by the window sensor.
