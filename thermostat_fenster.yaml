@@ -4,6 +4,8 @@ blueprint:
   input:
     window_entity:
       name: Fenster Sensor
+      selector:
+        entity:
 
     climate_target:
       name: Climate Device
