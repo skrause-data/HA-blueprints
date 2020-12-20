@@ -4,11 +4,7 @@ blueprint:
   input:
     window_entity:
       name: Fenster Sensor
-      selector:
-        entity:
-          domain: 
-            - binary_sensor
-            - group
+
     climate_target:
       name: Climate Device
       selector:
