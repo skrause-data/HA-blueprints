@@ -1,17 +1,16 @@
 blueprint:
-  name: Window open, climate off
-  description: An automation that turns off your climate device for exmple a heater or an air conditioning if a window sensor is open. It waits until the window is closed again in order to turn the climate entity on again.
+  name: Fenster offen, Heizung aus
   domain: automation
   input:
     window_entity:
-      name: Window Sensor
-      description: The window sensor that controls the climate entity.
+      name: Fenster Sensor
       selector:
         entity:
-          domain: binary_sensor
+          domain: 
+            - binary_sensor
+            - group
     climate_target:
       name: Climate Device
-      description: The climate entity that is controlled by the window sensor.
       selector:
         entity:
           domain: climate
