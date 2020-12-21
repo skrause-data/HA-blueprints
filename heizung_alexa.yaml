@@ -16,13 +16,13 @@ blueprint:
     message:
       name: Message (Optional)
       description: 'Default: "Die Heizung ist an."'
-      default: Die Heizung ist an
+      default: Die Heizung ist aus.
 mode: single
 trigger:
 - platform: state
   entity_id: !input 'climate'
-  from: "off"
-  to: "heat"
+  from: "heat"
+  to: "off"
 action:
   - service: notify.alexa_media
     data:
