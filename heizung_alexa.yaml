@@ -22,7 +22,7 @@ trigger:
 - platform: state
   entity_id: !input 'climate'
   from: "off"
-  to: "on"
+  to: "heat"
 action:
   - service: notify.alexa_media
     data:
