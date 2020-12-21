@@ -1,0 +1,33 @@
+blueprint:
+  name: Heizung - Alexa Info
+  description: 'Alexa Ansage, wenn die Heizung eingeschaltet wird.'
+  domain: automation
+  input:
+    climate:
+      name: Heizung
+      selector:
+        entity:
+    echo_device:
+      name: Alexa
+      description: Das Alexa-Gerät, auf dem die Ansage gemacht werden soll. Erstellen Sie eine durch Kommas getrennte Liste, um sie auf mehreren Geräten wiederzugeben.
+      selector:
+        entity:
+          domain: media_player
+    message:
+      name: Message (Optional)
+      description: 'Default: "Die Heizung ist an."'
+      default: Die Heizung ist an
+mode: single
+trigger:
+- platform: state
+  entity_id: !input 'climate'
+  from: "off"
+  to: "on"
+action:
+  - service: notify.alexa_media
+    data:
+      target:
+        - !input 'echo_device'
+      message: !input message
+      data:
+        type: tts
