@@ -1,0 +1,34 @@
+blueprint:
+  name: Fenster offen, Heizung aus
+  domain: automation
+  input:
+    window_entity:
+      name: Fenster Sensor
+      selector:
+        entity:
+
+    climate_target:
+      name: Climate Device
+      selector:
+        entity:
+          domain: climate
+
+trigger:
+  - platform: state
+    entity_id: !input window_entity
+    to: 'on'
+condition:
+  - condition: state
+    entity_id: !input climate_target
+    state: 'heat'
+
+action:
+  - service: climate.turn_off
+    entity_id: !input climate_target
+  - wait_for_trigger:
+    - platform: state
+      entity_id: !input window_entity
+      to: 'off'
+    continue_on_timeout: false
+  - service: climate.turn_on
+    entity_id: !input climate_target
