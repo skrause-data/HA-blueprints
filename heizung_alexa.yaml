@@ -1,5 +1,5 @@
 blueprint:
-  name: Heizung - Alexa Info Heizung aus
+  name: Heizung - Alexa Info Heizung aus 
   description: 'Alexa Ansage, wenn die Heizung ausgeschaltet wird.'
   domain: automation
   input:
