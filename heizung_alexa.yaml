@@ -1,6 +1,6 @@
 blueprint:
-  name: Heizung - Alexa Info
-  description: 'Alexa Ansage, wenn die Heizung eingeschaltet wird.'
+  name: Heizung - Alexa Info Heizung aus
+  description: 'Alexa Ansage, wenn die Heizung ausgeschaltet wird.'
   domain: automation
   input:
     climate:
@@ -23,7 +23,7 @@ trigger:
   entity_id: !input 'climate'
   from: "heat"
   to: "off"
-  for: "00:00:15"
+  for: "00:00:05"
 action:
   - service: notify.alexa_media
     data:
