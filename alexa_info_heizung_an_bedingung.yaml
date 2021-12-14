@@ -1,6 +1,6 @@
 blueprint:
   name: Heizung - Alexa Info Heizung an mit Bedingung (off)
-  description: 'Alexa Ansage, wenn die Heizung eingeschaltet wird.'
+  description: 'Alexa Ansage, wenn die Heizung eingeschaltet wird. MIT BEDINGUNG'
   domain: automation
   input:
     climate:
