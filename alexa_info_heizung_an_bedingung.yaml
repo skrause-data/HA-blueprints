@@ -28,9 +28,9 @@ trigger:
   to: "heat"
   for: "00:00:05"
  condition:
-    condition: state
-    entity_id: !input 'condition'
-    state: 'off'
+  condition: state
+  entity_id: !input 'condition'
+  state: 'off'
 action:
   - service: notify.alexa_media
     data:
