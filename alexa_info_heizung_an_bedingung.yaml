@@ -27,7 +27,7 @@ trigger:
   from: "off"
   to: "heat"
   for: "00:00:05"
- condition:
+condition:
 - condition: state
   entity_id: !input 'condition'
   state: 'off'
