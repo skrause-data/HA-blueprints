@@ -13,6 +13,9 @@ blueprint:
       selector:
         entity:
           domain: media_player
+    condition:
+       name: Bedingung für Echo Wiedergabe (state off)
+       default: ''
     message:
       name: Message (Optional)
       description: 'Default: "Die Heizung ist an."'
@@ -24,6 +27,10 @@ trigger:
   from: "off"
   to: "heat"
   for: "00:00:05"
+ condition:
+    condition: state
+    entity_id: !input 'condition'
+    state: 'off'
 action:
   - service: notify.alexa_media
     data:
