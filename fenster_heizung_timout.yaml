@@ -1,5 +1,5 @@
 blueprint:
-  name: Fenster offen, Heizung aus
+  name: Fenster offen, Heizung aus mit TIMEOUT
   domain: automation
   input:
     window_entity:
