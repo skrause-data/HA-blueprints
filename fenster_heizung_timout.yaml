@@ -39,3 +39,4 @@ action:
     continue_on_timeout: false
   - service: climate.turn_on
     entity_id: !input climate_target
+    
