@@ -69,7 +69,7 @@ action:
       # Double press on the button
       - conditions:
           - condition: template
-            value_template: '{{ trigger.event.data.command == "1_double" }}'
+            value_template: '{{ trigger.event.data.command == "double" }}'
         sequence: !input double
 
       # Long press on the button
