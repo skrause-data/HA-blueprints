@@ -63,7 +63,7 @@ action:
       # Single press on the button
       - conditions:
           - condition: template
-            value_template: '{{ trigger.event.data.command == "1_single" }}'
+            value_template: '{{ trigger.event.data.command == "single" }}'
         sequence: !input single
 
       # Double press on the button
