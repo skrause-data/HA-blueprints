@@ -17,8 +17,6 @@ blueprint:
       description: Select the rotary dial you wish to use
       selector:
         device:
-          integration: MQTT
-          manufacturer: Xiaomi
           model: Aqara knob H1 (wireless) (ZNXNKG02LM)
     single:
       name: Single Press
